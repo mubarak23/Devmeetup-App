@@ -2,7 +2,7 @@
 <v-container>
 <v-layout row wrap class="mb-2">
 		 <v-flex xs12 sm6 class="text-sm-right text-xs-center">
-		 	<v-btn large class="primary" router to="/meetup">Explore Meetup</v-btn>
+		 	<v-btn large class="primary" router to="/meetups">Explore Meetup</v-btn>
 		 </v-flex>
 		 <v-flex xs12 sm6 class="text-sm-left text-xs-center">
 		 	<v-btn large router to="/meetup/new" class="primary">Organize Meetup</v-btn>
@@ -10,11 +10,12 @@
 	</v-layout>
 	<v-layout row wrap>
 		<v-flex xs12>
-			<v-carousel>
+			<v-carousel style="cursor: pointer;">
 				<v-carousel-item
 				v-for="meetup in meetups"
 				:src="meetup.imageUrl"
-				:key="meetup.id" >
+				:key="meetup.id"
+				@click="onLoadmeetup(meetup.id)" >
 				</v-carousel-item>
 			</v-carousel>
 		</v-flex>
@@ -37,7 +38,13 @@ export default {
 			{ imageUrl: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcdn-image.travelandleisure.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F1600x1000%2Fpublic%2F1475261147%2Ftimes-square-nyc-food-EAT0916.jpg%3Fitok%3DGpQTB9qQ&w=450&c=sc&poi=face&q=85', title: 'meetup in new york'}
 		]
 	}
-	}
+	
+	},
+	methods: {
+		onLoadmeetup(id){
+			this.$router.push('/meetups/' + id)
+		}
+	 }
 }	
 
 </script>
