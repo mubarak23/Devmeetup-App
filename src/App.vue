@@ -44,7 +44,7 @@ export default {
       sideNav: false,
       manuItems: [
         { icon: 'supervisor_account', title: 'View Meetups', link: '/meetups' },
-        { icon: 'room', title: 'Organize Meetup', link: '/createmeetup'},
+        { icon: 'room', title: 'Organize Meetup', link: '/meetup/new'},
         { icon: 'person', title: 'Profile', link: '/profile'},
         { icon: 'face', title: 'Sign up', link: '/signup'},
         { icon: 'lock_open', title: 'Sign in', link: '/signin'}

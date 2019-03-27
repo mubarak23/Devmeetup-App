@@ -22,17 +22,16 @@ export default new Router({
       name: 'Meetups',
       component: Meetups
     },
+    {
+      path: '/meetup/new',
+      name: 'CreateMeetup',
+      component: CreateMeetup
+    },
 	{
 		path: '/meetups/:id',
 		name: 'Meetup',
 		component: Meetup
-	},
-	{
-      path: '/createmeetup',
-      name: 'CreateMeetup',
-      component: CreateMeetup
-    },
-    
+	},    
     {
       path: '/profile',
       name: 'Profile',
