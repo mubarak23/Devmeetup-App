@@ -1,5 +1,13 @@
 <template>
 <v-container>
+<v-layout row wrap class="mb-2">
+		 <v-flex xs12 sm6 class="text-sm-right text-xs-center">
+		 	<v-btn large class="primary" router to="/meetup">Explore Meetup</v-btn>
+		 </v-flex>
+		 <v-flex xs12 sm6 class="text-sm-left text-xs-center">
+		 	<v-btn large router to="/createmeetup" class="primary">Organize Meetup</v-btn>
+		 </v-flex>
+	</v-layout>
 	<v-layout row wrap>
 		<v-flex xs12>
 			<v-carousel>
@@ -11,15 +19,11 @@
 			</v-carousel>
 		</v-flex>
 	</v-layout>
-	<v-layout row wrap>
-		 <v-flex xs12 sm6 class="text-sm-right text-xs-center">
-		 	<v-btn large class="primary" router to="/meetup">Explore Meetup</v-btn>
-		 </v-flex>
-		 <v-flex xs12 sm6 class="text-sm-left text-xs-center">
-		 	<v-btn large router to="/createmeetup" class="primary">Organize Meetup</v-btn>
-		 </v-flex>
+	<v-layout row wrap class="mt-2">
+		<v-flex x12 class="text-xs-center">
+			<p>Join Our Awesome Meetup!</p>
+		</v-flex>
 	</v-layout>
-	
 </v-container>
 
 </template>
@@ -37,3 +41,11 @@ export default {
 }	
 
 </script>
+
+<style scoped>
+	.title {
+		position: absolute;
+		bottom:50px;
+
+	}
+</style>
