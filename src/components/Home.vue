@@ -40,6 +40,14 @@ export default {
 	}
 	
 	},
+	computed: {
+		meetups () {
+		return this.$store.getters.featuredMeetups
+		}
+
+	},
+
+
 	methods: {
 		onLoadmeetup(id){
 			this.$router.push('/meetups/' + id)
