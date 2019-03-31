@@ -33,6 +33,7 @@
 export default {
 	computed: {
 		meetups () {
+		console.log(this.$store.getters.featuredMeetups);
 		return this.$store.getters.featuredMeetups
 		}
 

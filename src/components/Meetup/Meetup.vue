@@ -2,14 +2,14 @@
 <v-container>
 	<v-layout row wrap>
 		<v-flex xs12>
-			<v-card>
+			<v-card v-if='meetup'>
 				<v-card-title>
-					<h3 class="primary--text"> {{ meetup.title }}</h3>
+					<h3 class="primary"> {{ meetup.title }}</h3>
 				</v-card-title>
-				<v-card-media
-						:src="meetup.imageUrl"
+				<v-img
+						:src= "meetup.imageUrl"
 						height="250px"
-						></v-card-media>
+						></v-img>
 				<v-card-text>
 					<div class="primary--text">{{ meetup.date }}</div>
 					this is our fisrt meetup this is our fisrt meetup
@@ -27,9 +27,10 @@
 
 <script>
 export default {
-	
 	computed: {
 		meetup () {
+			console.log(this.$store.getters.loadedMeetup(this.$route.params.id));
+
 			return this.$store.getters.loadedMeetup(this.$route.params.id),
 			console.log(this.$route.params.id)
 			
