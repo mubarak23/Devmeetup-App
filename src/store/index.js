@@ -6,7 +6,6 @@ Vue.use(Vuex)
 
 
 export const store = new Vuex.Store({
-
 	state: {
 		loadedMeetups:  [
 			{ imageUrl: 'https://media.timeout.com/images/100559575/630/472/image.jpg',
