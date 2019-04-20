@@ -80,7 +80,8 @@
 				&& this.location !== ''
 				&& this.description !== ''
 				 && this.imageUrl !== '';
-			},
+			}	
+		},
 		methods: {
 			onCreateMeetup() {
 				const meetupData = {
@@ -90,9 +91,9 @@
 				imageUrl: this.imageUrl,
 				date: new Date()
 				}
-				this.$store.dispatch('createMeetup', 'meetupData');		
+				this.$store.commit('createMeetup', meetupData);		
 			}
-		}	
 		}
+
 	}	
 </script>

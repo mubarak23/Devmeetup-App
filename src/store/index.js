@@ -23,12 +23,11 @@ export const store = new Vuex.Store({
 	muatations: {
 
 		createMeetup(state, payload){
-			state.loadedMeetups.push(payload);
+			state.loadedMeetups.push(payload)
 		}
 	},
 
 	actions: {
-
 		createMeetup ({commit}, payload) {
 			const meetup = {
 				title: payload.title,
