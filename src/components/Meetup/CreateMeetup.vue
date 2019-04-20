@@ -1,6 +1,10 @@
 <template>
-<div>
-		The Create Meetup Page
-</div>
+<v-container>
+	<v-layout row>
+		<v-flex xs12>
+			<h2>Create New Meetup</h2>
+		</v-flex>
+	</v-layout>	
+</v-container>
 
 </template>
