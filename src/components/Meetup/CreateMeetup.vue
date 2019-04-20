@@ -42,12 +42,17 @@
 				</v-layout>
 				<v-layout row>
 					<v-flex xs12 sm6 offset-sm3>
-						<v-text-field 
+						<v-textarea 
 						name="description"
 						 label="Description"
-						 multi-line 
-						 v-model ="title"
-						 id="description"></v-text-field>
+						 v-model ="description"
+						 id="description"></v-textarea>
+					</v-flex>
+				</v-layout>
+				<v-layout row>
+					<v-flex xs12 sm6 offset-sm3>
+						<v-btn class="primary"
+						 :disabled="!formIsvalid">Create Meetup</v-btn>
 					</v-flex>
 				</v-layout>
 			</form>
@@ -65,6 +70,15 @@
 				location: '',
 				description: '',
 				imageUrl: ''
+			}
+		},
+
+		computed: {
+			formIsvalid () {
+				return this.title !== '' 
+				&& this.location !== ''
+				&& this.description !== ''
+				 && this.imageUrl !== '';
 			}
 		}
 	}	
